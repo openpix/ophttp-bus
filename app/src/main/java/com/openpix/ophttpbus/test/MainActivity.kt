@@ -20,4 +20,9 @@ class MainActivity : AppCompatActivity() {
     fun onEventUserInfo(userInfo: UserInfo){
         findViewById<TextView>(R.id.tv_info).setText(userInfo.userString)
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        HttpBusManager.getInstance().unregister(this)
+    }
 }

@@ -6,7 +6,6 @@ import com.openpix.ophttpbus.utils.ProtocolParser
 import org.json.JSONObject
 
 abstract  class MyResultParser : ResultParser<JSONObject>() {
-
     override fun resolve(result: JSONObject?): Any {
         val state = ProtocolParser.getJsonInt(result, "state")
         if (state != 0 || !result!!.has("content")) {
@@ -22,6 +21,5 @@ abstract  class MyResultParser : ResultParser<JSONObject>() {
         parse(result)
         return this
     }
-
     abstract fun parse(result:JSONObject)
 }
