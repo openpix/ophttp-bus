@@ -1,7 +1,13 @@
-plugins {
-    id 'com.android.library'
-    id 'kotlin-android'
-}
+//plugins {
+//    id 'com.android.library'
+//    id 'kotlin-android'
+//    id 'kotlin-android-extensions'
+//    id 'com.novoda.bintray-release'
+//}
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 30
@@ -30,6 +36,16 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+}
+
+
+publish {
+    userOrg = 'openpix'//bintray.com用户名
+    groupId = 'com.openpix'//jcenter上的路径
+    artifactId = 'ophttp-bus'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'first issue'//描述，不重要
+    website = 'https://github.com/openpix/ophttp-bus'//网站，最好有，不重要
 }
 
 dependencies {
