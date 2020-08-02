@@ -3,6 +3,8 @@ package com.openpix.ophttpbus.test
 import android.app.Application
 import com.openpix.ophttpbus.callback.IRequestPreCallback
 import com.openpix.ophttpbus.http.BaseRequest
+import com.openpix.ophttpbus.http.HttpBusManager
+import org.greenrobot.eventbus.EventBus
 import java.util.HashMap
 
 class TestApplication : Application(){

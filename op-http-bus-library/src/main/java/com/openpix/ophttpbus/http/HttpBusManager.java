@@ -1,5 +1,8 @@
 package com.openpix.ophttpbus.http;
 
+import com.openpix.ophttpbus.EventManager;
+import com.openpix.ophttpbus.http.substriber.HttpSubscriber;
+
 /**
  * Created by tangpengxiang on 2017/6/27.
  */
@@ -17,6 +20,8 @@ public class HttpBusManager implements IHttpEventManager {
             synchronized (HttpBusManager.class) {
                 if (Instance == null) {
                     Instance = new HttpBusManager();
+                    Instance.setManager(EventManager.INSTANCE);
+                    Instance.register(new HttpSubscriber());
                 }
             }
         }

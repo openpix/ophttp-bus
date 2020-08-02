@@ -1,6 +1,8 @@
 package com.openpix.ophttpbus.http;
 
 
+import android.util.Log;
+
 import com.openpix.ophttpbus.callback.IRequestPreCallback;
 import com.openpix.ophttpbus.http.substriber.CancleEvent;
 import com.openpix.ophttpbus.http.substriber.HttpRequestMode;
