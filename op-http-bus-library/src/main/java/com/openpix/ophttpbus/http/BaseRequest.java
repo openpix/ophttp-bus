@@ -1,8 +1,6 @@
 package com.openpix.ophttpbus.http;
 
 
-import android.util.Log;
-
 import com.openpix.ophttpbus.callback.IRequestPreCallback;
 import com.openpix.ophttpbus.http.substriber.CancleEvent;
 import com.openpix.ophttpbus.http.substriber.HttpRequestMode;
@@ -67,7 +65,7 @@ public class BaseRequest {
             if(null != requestPreCallback) {
                 requestPreCallback.onRequestPre(params,header);
             } else {
-                throw new IllegalStateException("http sign callback is null");
+                throw new IllegalStateException("http pre callback is null");
             }
 //            SignHelper.addSignWithHeader(params, header);
         }
