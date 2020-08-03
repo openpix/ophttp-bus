@@ -1,10 +1,5 @@
 package com.openpix.ophttpbus.http.substriber;
-
-
-
 import android.util.Log;
-
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
